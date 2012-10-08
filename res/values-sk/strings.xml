@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Dril</string>
-    <string name="app_name_long">Dril - angličtina efektívne</string>
+    <string name="app_name_long">Dril - nemčina efektívne</string>
     <string name="dashboard">Ovladací panel</string>
     <string name="btn_start">Spustiť dril</string>
     <string name="btn_book">Učebnice</string>
@@ -107,7 +107,7 @@
     <!-- INFO  -->
     
     <string name="about_app">O aplikácii</string>
-    <string name="app_descr">Aplikácia Dril je určená na učenie anglických slovíčok a fráz. Dril je založený na metóde opakovania, je to efektívny spôsob memorovania napr. slovíčok či iných jednotlivých informácií určených na naučenie sa naspamäť.</string>
+    <string name="app_descr">Aplikácia Dril je určená na učenie nemeckých slovíčok a fráz. Dril je založený na metóde opakovania, je to efektívny spôsob memorovania napr. slovíčok či iných jednotlivých informácií určených na naučenie sa naspamäť.</string>
     <string name="info_btn_head">Čo znamenajú jednotlivé tlačítka?</string>
     <string name="ibtn1">1. - Vedel som to okamžite, kartička sa už v drile nezobrazí.</string>
     <string name="ibtn2">2. - Vedel som to, ale musel som chvíľku rozmýšlať, kartička sa v drile znova zobrazí.</string>
