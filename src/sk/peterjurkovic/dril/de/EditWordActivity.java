@@ -37,16 +37,14 @@ public class EditWordActivity extends FragmentActivity implements OnEditWordList
         cancel.setVisibility(View.VISIBLE);
         
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	finish();
             }
         });
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(EditWordActivity.this, DashboardActivity.class) );
             }
         });

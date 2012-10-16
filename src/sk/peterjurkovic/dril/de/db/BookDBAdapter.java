@@ -142,6 +142,7 @@ public class BookDBAdapter extends DBAdapter {
     
     
     
+    
     public boolean editBook(long bookId, String bookName) {
         cdb = openWriteableDatabase();
         ContentValues values = new ContentValues();

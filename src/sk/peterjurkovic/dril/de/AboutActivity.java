@@ -29,8 +29,7 @@ public class AboutActivity extends Activity {
 		
 		ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(AboutActivity.this, DashboardActivity.class) );
             }
         });

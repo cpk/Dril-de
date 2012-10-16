@@ -47,8 +47,7 @@ public final class DashboardActivity extends MainActivity implements AsyncLIsten
         Button btn_update = (Button) findViewById(R.id.btn_update);
  
         btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View view) {
+            public void onClick(View view) {
             	
             	if(countOfActiveWords == 0){
             		Toast.makeText(getApplicationContext(), R.string.zero_cards_alert, Toast.LENGTH_SHORT).show();
@@ -61,32 +60,28 @@ public final class DashboardActivity extends MainActivity implements AsyncLIsten
         });
         
         btnBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View view) {
+            public void onClick(View view) {
             		Intent i = new Intent(getApplicationContext(), BookListActivity.class);
             		startActivity(i);
             }
         });
         
         btn_stats.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View view) {
+            public void onClick(View view) {
             		Intent i = new Intent(getApplicationContext(), SessionStatisticActivity.class);
             		startActivity(i);
             }
         });
         
         btn_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View view) {
+            public void onClick(View view) {
         		Intent i = new Intent(getApplicationContext(), InfoActivity.class);
         		startActivity(i);
 	        }
 	    });
         
         btn_update.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View view) {
+            public void onClick(View view) {
             	
             	CheckForUpdate chfu = new CheckForUpdate( context );
     	    	chfu.execute(); 
@@ -158,13 +153,11 @@ public final class DashboardActivity extends MainActivity implements AsyncLIsten
 			.setMessage(R.string.update_available)
 			.setCancelable(false)
 			.setNegativeButton(R.string.no,new DialogInterface.OnClickListener() {
-						@Override
 						public void onClick(DialogInterface dialog,int id) {
 							dialog.cancel();
 						}
 			})
 			.setPositiveButton(R.string.yes ,new DialogInterface.OnClickListener() {
-				@Override
 				public void onClick(DialogInterface dialog,int id) {
 					dialog.cancel();
 					UpdateSaver chfu = new UpdateSaver( context );
@@ -190,7 +183,6 @@ public final class DashboardActivity extends MainActivity implements AsyncLIsten
 			.setMessage(responseMsg)
 			.setCancelable(false)
 			.setNegativeButton(R.string.ok,new DialogInterface.OnClickListener() {
-						@Override
 						public void onClick(DialogInterface dialog,int id) {
 							dialog.cancel();
 						}

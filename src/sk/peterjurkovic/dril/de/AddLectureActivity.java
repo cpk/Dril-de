@@ -23,23 +23,20 @@ public class AddLectureActivity extends MainActivity {
         Button cancel = (Button)findViewById(R.id.cancelAddLecture);
         
         submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 onSubmitAddClicked();
             }
         });
         
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	onCancelAddClicked();
             }
         });
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(AddLectureActivity.this, DashboardActivity.class) );
             }
         });

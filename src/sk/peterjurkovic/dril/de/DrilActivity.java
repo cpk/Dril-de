@@ -20,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -76,8 +77,7 @@ public class DrilActivity extends MainActivity implements OnInitListener{
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(DrilActivity.this, DashboardActivity.class) );
             }
         });
@@ -87,7 +87,7 @@ public class DrilActivity extends MainActivity implements OnInitListener{
         
         slideLeftIn = AnimationUtils.loadAnimation(this, R.anim.left_ight);
 
-        layout = findViewById(R.id.dril);
+        layout = (RelativeLayout) findViewById(R.id.dril);
         
         layout.startAnimation(slideLeftIn);
         
@@ -280,7 +280,9 @@ public class DrilActivity extends MainActivity implements OnInitListener{
     		drilFinished( R.string.dril_finished );
     		return false;
     	}
-    	if(position == activatedWords.size()) position = 0;
+    	if(position == activatedWords.size()){ 
+    		position = 0;
+    	}
     	currentWord = activatedWords.get(position);
 		currentWord.increaseHit();
     	position++;
@@ -332,8 +334,13 @@ public class DrilActivity extends MainActivity implements OnInitListener{
     }
     
     
-    private void speakWords(String speech) {
-    	 textToSpeachService.speak(clearWord( speech ), TextToSpeech.QUEUE_FLUSH, null);
+    private void speakWords(String word) {
+    	if(word == null || word.length() == 0){
+    		Toast.makeText(this, R.string.nothing_to_speeach, Toast.LENGTH_LONG).show();
+    	}else{
+    		if(textToSpeachService != null)
+    			textToSpeachService.speak(clearWord( word ), TextToSpeech.QUEUE_FLUSH, null);
+    	}
     }
     
     @Override
@@ -356,7 +363,7 @@ public class DrilActivity extends MainActivity implements OnInitListener{
     @Override
     public void onInit(int initStatus) {
     	if (initStatus == TextToSpeech.SUCCESS) {
-            textToSpeachService.setLanguage(Locale.GERMAN);
+            textToSpeachService.setLanguage(Locale.ENGLISH);
         }else if (initStatus == TextToSpeech.ERROR) {
             Toast.makeText(this, R.string.speach_failed, Toast.LENGTH_LONG).show();
         }
@@ -384,10 +391,9 @@ public class DrilActivity extends MainActivity implements OnInitListener{
      * @return String escaped string
      */
     public String clearWord(String word){
-    	Pattern pat = Pattern.compile("((\\(.*)\\)|(\\/(.*)\\/))");   
-    	String w = pat.matcher(word).replaceAll(" ");
-    	//Log.d("DRIL", "Original: "+word + " Replaced: " +w);
-    	return w;  
+    	Pattern pat = Pattern.compile("(\\s(n|v|adj|adv|st|conj)(\\s)?)|(\\s(\\(n\\)|"+
+    									"\\(v\\)|\\(adj\\)|\\(adv\\)|\\(conj\\))(\\s)?)|(\\[.*\\])");   
+    	return pat.matcher(word).replaceAll("");  
     }
     
     

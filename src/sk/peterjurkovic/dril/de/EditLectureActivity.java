@@ -35,15 +35,13 @@ public class EditLectureActivity extends MainActivity {
         Button cancel = (Button)findViewById(R.id.cancelLectureEdit);
         
         submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	onSubmitEditLectureClicked();
             }
         });
         
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	onCancelEditLectureClicked();
             	
             }
@@ -51,8 +49,7 @@ public class EditLectureActivity extends MainActivity {
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(EditLectureActivity.this, DashboardActivity.class) );
             }
         });

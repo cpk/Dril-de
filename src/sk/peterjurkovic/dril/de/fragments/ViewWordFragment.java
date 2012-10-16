@@ -76,30 +76,26 @@ public class ViewWordFragment extends Fragment {
 	        viewDeactive = (Button)view.findViewById(R.id.viewDeactive);
 	        
 	        viewDelete.setOnClickListener(new View.OnClickListener() {
-	            @Override
-				public void onClick(View v) {
+	            public void onClick(View v) {
 	            	onDeleteWordListener.onDeleteClicked(wordId);
 	            }
 	        });
 	        
 	        viewEdit.setOnClickListener(new View.OnClickListener() {
-	            @Override
-				public void onClick(View v) {
+	            public void onClick(View v) {
 	            	onEditWordClickedListener.onEditWordClicked(wordId);
 	            }
 	        });
 	        
 	        viewActive.setOnClickListener(new View.OnClickListener() {
-	            @Override
-				public void onClick(View v) {
+	            public void onClick(View v) {
 	            	onChangeWordStatusListener.activeWord(wordId);
 	            	setActivationButtonVisibility( STATUS_ACTIVE );
 	            }
 	        });
 	        
 	        viewDeactive.setOnClickListener(new View.OnClickListener() {
-	            @Override
-				public void onClick(View v) {
+	            public void onClick(View v) {
 	            	onChangeWordStatusListener.deactiveWord(wordId);
 	            	setActivationButtonVisibility( STATUS_DEACTIVE );
 	            }

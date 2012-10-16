@@ -2,6 +2,7 @@ package sk.peterjurkovic.dril.de;
 
 import sk.peterjurkovic.dril.de.adapter.BookAdapter;
 import sk.peterjurkovic.dril.de.db.BookDBAdapter;
+import sk.peterjurkovic.dril.de.db.WordDBAdapter;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -38,8 +39,7 @@ public class BookListActivity extends ListActivity {
 	    registerForContextMenu( getListView() );
 	    ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(BookListActivity.this, DashboardActivity.class) );
             }
         });
@@ -211,6 +211,20 @@ public class BookListActivity extends ListActivity {
 		startActivity(intent);
 	}
 	
+	public void deactiveAllCards(){
+		WordDBAdapter wordDBAdapter = new WordDBAdapter(this);
+		try {
+			wordDBAdapter.deactiveAll();
+		} catch (Exception e) {
+			Log.d(TAG, "ERROR: " + e.getMessage());
+		} finally {
+			wordDBAdapter.close();
+		}
+		updateList();
+		Toast.makeText(this, R.string.words_deactived, Toast.LENGTH_LONG).show();		   
+		
+	}
+	
 	@Override
 	protected void onDestroy() {
 		super.onStop();
@@ -232,17 +246,19 @@ public class BookListActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	MenuInflater inflater = getMenuInflater();
-	inflater.inflate(R.menu.main_menu, menu);
+	inflater.inflate(R.menu.book_list, menu);
 	return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
-	    case R.id.menu_about:
+	    case R.id.menu_about2:
 	        startActivity(new Intent(this, AboutActivity.class));
-	    	Log.d("MAINACTIVITY", "starting abotu...");
 	        return true;
+	    case R.id.deactive_all:
+	    	deactiveAllCards();
+	    	return true;
 	    default:
 	        return super.onOptionsItemSelected(item);
 	    }

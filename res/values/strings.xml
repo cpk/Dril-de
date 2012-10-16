@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Dril</string>
-    <string name="app_name_long">Dril - deutsch effectively</string>
+    <string name="app_name_long">Dril - german effectively</string>
     <string name="dashboard">Dashboard</string>
     <string name="btn_start">Start dril</string>
     <string name="btn_book">Textbooks</string>
@@ -23,12 +23,9 @@
     <string name="edit">Rename</string>
     <string name="editWord">Edit</string>
     <string name="delete">Delete</string>
-    <string name="active">Activate</string>
-    <string name="deactive">Deactivate</string>
     <string name="deleted">Successfully deleted</string>
     <string name="book_not_deleted">The textbook could not be deleted</string>
     <string name="no_book_available">There are not textbooks</string>
-    
     <string name="title">Name</string>
     <string name="book_not_added">Some error occured, textbook was not added</string>
     <string name="lecture_added">Lesson successfully added</string>
@@ -47,9 +44,15 @@
 	<string name="no_lecture_available">Textbook not contain any lessons</string>
 	<string name="lecture">Lessons</string>
 	<string name="options">Options</string>
-	<string name="random_active_ten">Activate 10 cards randomly</string>
-	<string name="lecture_deactive_all">Deactivate all cards</string>
 	<string name="home">Go to dashboard</string>
+	
+	<string name="deactive_lecture">Deactivate lecture</string>
+	<string name="deactive_all">Deactive all</string>
+	<string name="deactive">Deactivate</string>
+	<string name="active">Activate</string>
+	<string name="active_lecture">Activate lecture</string>
+	<string name="active_all">Active all</string>
+	<string name="active_ten">Activate 10 cards randomly</string>
 	
     <string name="lecture_add_head">Add lesson</string>
     <string name="lecture_edit_head">Rename lesson</string>
@@ -76,6 +79,7 @@
 	<string name="pronauce_question">speech question</string>
 	<string name="pronauce_answer">speech answer</string>
 	<string name="speach_failed">Could not be pronounced given expression!</string>
+	<string name="nothing_to_speeach">Nothing to pronounce</string>
 	<string name="word_not_selected">No card selected</string>
 	
     <string name="menu_about">About app</string>
@@ -97,6 +101,7 @@
     <string name="table_finished">Number of learned cards:</string>
     <string name="stats_fully">General statistics</string>
     <string name="stats_session">Individual statistics</string>
+    <string name="stats_reset">Delete stats</string>
     
     <string name="netural">no progress</string>
     <string name="good">Improvement</string>
@@ -108,7 +113,7 @@
     <!-- INFO  -->
     
     <string name="about_app">About app</string>
-    <string name="app_descr">Dril application is created for learning deutsch words and phrases. Dril is based on the method of repetition, it is an effective way of memorizing e.g. words, or other information for the lern.</string>
+    <string name="app_descr">Dril application is created for learning german words and phrases. Dril is based on the method of repetition, it is an effective way of memorizing e.g. words, or other information for the lern. Should not be activated more than 30 cards.</string>
     <string name="info_btn_head">What does the buttons means?</string>
     <string name="ibtn1">1. - I knew it immediately, the card is no longer displayed in the drill.</string>
     <string name="ibtn2">2. - I knew it, but I had to think a moment, the card will in the dril again.</string>

@@ -34,8 +34,7 @@ public class AddWordActivity
         
         
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	finish();
             }
         });
@@ -45,8 +44,7 @@ public class AddWordActivity
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(AddWordActivity.this, DashboardActivity.class) );
             }
         });

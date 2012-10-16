@@ -1,5 +1,8 @@
 package sk.peterjurkovic.dril.de;
 
+
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -27,23 +30,20 @@ public class AddBookActivity extends FragmentActivity{
         Button cancel = (Button)findViewById(R.id.cancelAdd);
         
         submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 onSubmitAddClicked();
             }
         });
         
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	onCancelAddClicked();
             }
         });
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(AddBookActivity.this, DashboardActivity.class) );
             }
         });

@@ -41,15 +41,13 @@ public class EditBookActivity extends FragmentActivity {
         Button cancel = (Button)findViewById(R.id.cancelEdit);
         
         submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	onSubmitEditBookClicked();
             }
         });
         
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
             	onCancelEditBookClicked();
             	
             }
@@ -57,8 +55,7 @@ public class EditBookActivity extends FragmentActivity {
         
         ImageButton goHome = (ImageButton) findViewById(R.id.home);
         goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {
+            public void onClick(View v) {
                 startActivity( new Intent(EditBookActivity.this, DashboardActivity.class) );
             }
         });
