@@ -9,6 +9,8 @@ import sk.peterjurkovic.dril.de.db.WordDBAdapter;
 import sk.peterjurkovic.dril.de.model.Word;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
@@ -350,9 +352,16 @@ public class DrilActivity extends MainActivity implements OnInitListener{
                textToSpeachService = new TextToSpeech(this, this);
             }
             else {
+            	PackageManager pm = getPackageManager();
                 Intent installTTSIntent = new Intent();
                 installTTSIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
-                startActivity(installTTSIntent);
+                ResolveInfo resolveInfo = pm.resolveActivity( installTTSIntent, PackageManager.MATCH_DEFAULT_ONLY );
+                if( resolveInfo == null ) {
+                		Toast.makeText(this, R.string.speach_failed, Toast.LENGTH_LONG).show();
+                	} else {
+                		startActivity(installTTSIntent);
+                	}
+               
             }
             }
     	super.onActivityResult(requestCode, resultCode, data);
@@ -363,7 +372,7 @@ public class DrilActivity extends MainActivity implements OnInitListener{
     @Override
     public void onInit(int initStatus) {
     	if (initStatus == TextToSpeech.SUCCESS) {
-            textToSpeachService.setLanguage(Locale.ENGLISH);
+            textToSpeachService.setLanguage(Locale.GERMAN);
         }else if (initStatus == TextToSpeech.ERROR) {
             Toast.makeText(this, R.string.speach_failed, Toast.LENGTH_LONG).show();
         }

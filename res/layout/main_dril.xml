@@ -151,7 +151,7 @@
 		 	     android:height="100dp"
 		 	     android:text="@string/showAnswerBtn"
 		 	     android:textColor="#EfEFEF"
-		 	     android:textSize="18dp" />
+		 	     android:textSize="18sp" />
 		  
 		</RelativeLayout> 
 		
