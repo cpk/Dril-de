@@ -109,8 +109,25 @@
     <string name="dril_date">Dátum drilovania</string>
     <string name="dril_avg">Priemerná známka</string>
 	<string name="error_no_data">Nepodarilo sa načítať dáta</string>
-    <!-- INFO  -->
     
+	<string name="loading">Čakajte prosím, načítavam &#8230;</string>
+
+	
+	<!-- IMPORT v 1.4 -->
+	<string name="import_words">Importovat slovíčka</string>
+	<string name="what_is_csv">Čo to je CSV?</string>
+	<string name="csv_label">CSV je jednoduchý súborový formát určený pre výmenu tabuľkových dát. Súbor vo formátu CSV sa skladá z riadkov, v ktorých sú jednotlivé položky oddelené znakom čiarka (,). Hodnoty položiek môžu býť uzatvorené do úvodzoviek (\"), čo umožňuje, aby text položky obsahoval čiarku.</string>
+    <string name="how_it_create">Ako si ho môžem vytvoriť?</string>
+	<string name="csv_create">Každá kancelárska aplikácia má možnosť exportu do formátu CSV, napr. MS EXcel, Open Office Calc, Libre Office atd. \n\nTakže jednoducho si môžete napísať svoje slovíčka napríklad do Excelu, exportovať ich do formátu CSV a následne exportovaný súbor prekopírovať do Vašho mobilného zariadenia.</string>
+    <string name="csv_format">CSV formát pro túto aplikáciu</string>
+    <string name="csv_format_label">Tato aplikácia podporuje základný csv formát:\n\n\"slovíčko\",\"preklad\"\n\"slovíčko 2\",\"preklad\"\n\nPOZNÁMKA: nepoužíva žiadnou csv hlavičku.</string>
+    <string name="csv_choose">Vybrať csv soubor k importu</string>
+    <string name="import_status">Import status</string>
+    <string name="import_failed">Import sa nepodaril, skontrolujte formát CSV súboru.</string>
+    <string name="import_success">Úspešne importované!\nPočet nových kartiček: %1$d</string>
+	
+    
+    <!-- INFO  -->
     <string name="about_app">O aplikácii</string>
     <string name="app_descr">Aplikácia Dril je určená na učenie nemeckých slovíčok a fráz. Dril je založený na metóde opakovania, je to efektívny spôsob memorovania napr. slovíčok či iných jednotlivých informácií určených na naučenie sa naspamäť. Neni vhodné mať aktivovaných viac ako 30 kartičiek.</string>
     <string name="info_btn_head">Čo znamenajú jednotlivé tlačítka?</string>

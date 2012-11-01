@@ -32,14 +32,13 @@
 			    android:id="@+id/drilNav"
 		        android:layout_width="fill_parent"
 		        android:layout_alignParentTop="true"
-		        android:layout_height="20dp"
+		        android:layout_height="25dp"
 		        android:background="#DEDEDE" >
 		
 		        <TextView
 		            style="@style/drilLabel"
 		        	android:id="@+id/drilLabel1" 
-		        	android:layout_gravity="left"
-		        	android:layout_marginTop="2dp"
+		        	android:layout_gravity="center_vertical|center_horizontal"
 		        	android:text="@string/activated_words"/>
 		       
 		    </FrameLayout>
@@ -60,12 +59,11 @@
 		        android:layout_height="wrap_content"
 		        android:text="@string/question" />
 		
-			<ImageButton 
+			<ImageButton
 			    android:id="@+id/speakQuestion"
 			    style="@style/spiker"
-			 	android:contentDescription="@string/pronauce_question" 
-			 	android:layout_below="@id/shaddowDril"
-			   />
+			    android:layout_below="@id/shaddowDril"
+			    android:contentDescription="@string/pronauce_question" />
 			
 		    <TextView
 		        android:id="@+id/question"

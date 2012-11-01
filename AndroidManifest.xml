@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sk.peterjurkovic.dril.de"
-    android:versionCode="9"
-    android:versionName="1.3.1"
+    android:versionCode="10"
+    android:versionName="1.4"
     android:installLocation="auto"  >
 
     <uses-sdk
@@ -45,6 +45,7 @@
         <activity android:name=".SessionStatisticActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".InfoActivity" />
+        <activity android:name=".ImportActivity" />
     </application>
 
 </manifest>

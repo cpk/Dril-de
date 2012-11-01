@@ -372,7 +372,7 @@ public class DrilActivity extends MainActivity implements OnInitListener{
     @Override
     public void onInit(int initStatus) {
     	if (initStatus == TextToSpeech.SUCCESS) {
-            textToSpeachService.setLanguage(Locale.GERMAN);
+            textToSpeachService.setLanguage(Locale.GERMANY);
         }else if (initStatus == TextToSpeech.ERROR) {
             Toast.makeText(this, R.string.speach_failed, Toast.LENGTH_LONG).show();
         }
